@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Departamento de San Martín - Amazonía peruana</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .body-content {
+  padding-bottom: 50px; /* Ajusta el valor según la altura de tu footer */
+	}
+	
+  header {
+    background-color: #00E32D;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decorat8ion: none;
+  }
+  
+  section {
+    padding: 20px;
+    background-color: #C3E2C9;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    clear: both;
+	margin-bottom: 20px; /* Ajusta el margen inferior entre sections según sea necesario */
+  }
+  .new-section {
+    background-color: #C32E2C9;
+  }
+   article {
+    flex: 2;
+    margin-right: 20px;
+	margin-left: 20px;
+    background-color: #E3FFE8;
+    padding: 20px;
+	display: flex;
+	flex-direction: column;
+  }
+  new-article {
+    flex: 2;
+	margin: 0 20px; /* Margen horizontal de 20px, elimina el margen derecho e izquierdo individualmente */
+    background-color: #E3FFE8;
+    padding: 20px;
+	display: flex;
+	flex-direction: column;
+  }
+  new-article img:first-child {
+    margin-left: 0; /* Elimina el margen superior solo para la primera imagen dentro del article */
+	}
+   .map-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .map-container p {
+    flex: 1;
+    margin-left: 20px;
+    text-align: justify;
+  }
+  .map-container img {
+    flex-shrink: 0;
+    width: 250px;
+    height: 150px;
+	padding: 10px;
+  }
+  .map-contaier img {
+  margin-top: 5px;
+  }
+  
+	map-container ul {
+	flex: 1;
+    margin-left: 20px;
+	margin-right: 20px;
+    text-align: justify;
+	}
+	
+	map-container iframe {
+	flex-shirk: 0;
+	justify-content: center;
+	padding: 10px;
+	margin-top: 5px;
+	}
+	
+  article p {
+  text-align: justify;
+	}
+	
+	.list-container {
+  text-align: justify; /* Aplica justificación al contenedor de la lista */
+  margin-left: 20px;
+  margin-right: 20px;
+	}
+
+	.list-container ul {
+  padding: 10px;
+	}
+
+	.list-container li {
+  text-align: justify; /* Justifica el texto dentro de los elementos de la lista */
+	}
+	
+  aside {
+    background-color: #E3FFE8;
+    padding: 10px;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    background-color: #00E32D;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	height:50px;
+	line-height: 1; /* Ajusta la altura de línea para que el texto se pegue al límite superior */
+    margin-top: 0; /* Elimina cualquier margen superior */
+	margin: 0;
+  }
+  .visitor-form, .new-section {
+    background-color: #C3E2C9;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .visitor-form input, .visitor-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .visitor-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  
+  
+    .container {
+            display: flex;
+            justify-content: space-around; /* Distribuir espacio uniformemente */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea si es necesario */
+            gap: 20px; /* Espacio entre los elementos */
+            margin-top: 20px;
+        }
+
+
+  .image-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 100px;
+    margin-top: 1px;
+    overflow-x: auto;
+  }
+  .image-wrapper img {
+    flex-shrink: 0;
+    width: 100px;
+    height: auto;
+    margin-right: 0;
+	margin-top: 10px;
+  }
+  .image-wrapper img:first-child {
+   margin-left: 0; /* Elimina el margen izquierdo solo para la primera imagen */
+	}
+  .image-wrapper img:last-child {
+    margin-right: 0; /* Elimina el margen derecho adicional */
+  }
+  
+  
+  
+  .container2 {
+   max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+	overflow: hidden; /* Evita que el contenido se salga de los límites */
+	box-sizing: border-box; /* Incluye padding y border dentro del ancho especificado */
+	}
+  
+  .image-wrapper2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* Centrado en lugar de a la derecha */
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+  max-width: 100%; /* Para asegurar que no se salga de los límites del aside */
+	}
+
+	.image-wrapper2 img {
+	flex-shrink: 0;
+	width: 200px;
+	height: auto;
+	margin-right: 10px;
+	margin-left: 10px; /* Añadido para centrar las imágenes */
+		}
+
+	.image-wrapper2 img:first-child {
+	margin-left: 0; /* Eliminamos el margen izquierdo del primer elemento */
+	}
+
+	.image-wrapper2 img:last-child {
+	margin-right: 0; /* Eliminamos el margen derecho del último elemento */
+		}
+		
+	.lista-horizontal {
+    list-style-type: none; /* Quitamos los puntos de lista */
+    padding: 0; /* Quitamos el padding por defecto de la lista */
+    display: flex; /* Usamos flexbox para alinear elementos */
+	flex-wrap: wrap; /* Asegura que los elementos de la lista puedan envolverse en múltiples líneas si es necesario */
+	}
+	
+	.lista-horizontal li {
+		margin-right: 1px; /* Espacio entre elementos */
+		margin-bottom: 0; /* Espacio entre elementos en columnas */
+		flex: 1 0 140px; /* Hace que los elementos de la lista tengan un ancho de 140px y puedan crecer si es necesario */	
+	}
+	
+	
+	
+	
+	
+  /* Estilos para el mensaje de bienvenida */
+  .welcome-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8FFE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .welcome-message {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+	font-family: Times New Roman, serif; 
+	font-style: italic;
+  }
+  /* Estilo para el contenido de la página */
+  .page-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+  }
+  /* Clase para mostrar el contenido después de la animación de bienvenida */
+  .show-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+   .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            text-align: center;
+        }
+        .image-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .image-item p {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 200px;
+            font-size: 14px; /* Ajusta el tamaño del texto */
+        }
+
+.image-item2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            text-align: center;
+        }
+        .image-item2 img {
+            width: 200px;
+            height: 183px;
+            object-fit: cover;
+        }
+        .image-item2 p {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 200px;
+            font-size: 14px; /* Ajusta el tamaño del texto */
+        }
+.map-container2 {
+    display: flex;
+    justify-content: center;
+  }
+.map-container2 iframe {
+   flex-shrink: 0;
+	padding: 10px;
+}
+    </style>
+</head>
+<body>
+
+<!-- Elemento de bienvenida -->
+<div class="welcome-container">
+    <div class="welcome-message">
+        <h1>Bienvenido nuevamente a nuestra página</h1>
+        <p>Espere un momento mientras cargamos el contenido...</p>
+    </div>
+</div>
+
+<header>
+    <h1>Sobre Nosotros</h1>
+    <nav>
+        <ul>
+            <li><a href="#historia">Aspectos Sociales y Culturales</a></li>
+            <li><a href="#productos">Aspectos Geográficos</a></li>
+            <li><a href="#contacto">Aspectos económicos</a></li> 
+			<li><a href="#PáginaPrincipal">Página Principal</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-content">
+    <article>
+        <h2 id="historia">¿Quiénes somos?</h2>
+		<div class="map-container">
+		<div class="list-container">
+        <ul>
+            <li>Somos un grupo de 9no "C" de Secundaria que busca fortelecer el amor por nuestra patria y las maravillas que tiene.</li>
+            <li>Somos alumnos autonomos en el manejo de la tecnología.</li>
+            <li>Dedicamos nuestro esfuerzo a contribuir al conocmiento sobre las diversas regiones del Perú.</li>
+            <li>Somos los creadores de esta página web en Html</li>
+            <li>Somos aquellos que esperan que te guste nuestro trabajo.</li>
+        </ul>
+		</div>
+		 <img src="https://www.adca.edu.pe/wp-content/uploads/2022/12/foto11.png" alt="Colegio María Alvarado" width="215" height="250">
+	</div>
+		<h2 id="historia">Lo genial de San Martín</h2>
+		 <div class="map-container">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/-NyTVxp2wgw?si=wrYkg3QYeh0Xq-cj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+    </article>
+    <aside>
+        <h2>Video promocional: NUestro amado colegio</h2>
+        <iframe width="460" height="315" src="https://www.youtube.com/embed/ziC8DuMyFm4?si=twGzDFeA04Wl5TfO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>Navegador</h2>
+        <form action="https://www.google.com/search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="Buscar en Google">
+            <input type="submit" value="Buscar">
+        </form>
+		<h2>Drive de Imágenes</h2>
+		<p>Haz clic en el siguiente enlace para ver el archivo:</p>
+	<a href="https://drive.google.com/drive/folders/1ArFiQJzg-skVARdHKDwmdE3Y_4zZhKbo?usp=sharing">
+    <img src= "https://icon-icons.com/icons2/1379/PNG/512/foldergreengoogledrive_93478.png" alt="Carpeta de Drive" height="80%" width="30%"></a>
+    </aside>
+</section>
+
+
+<section class="new-section">
+        <article class="new-article">
+            <h2>Nuestros objetivos</h2>
+            <div class="container">
+                <div class="image-item2">
+                    <p><b>Fortalecer el desarrollo de las habilidades tecnológicas, sociales y de liderazgo</b></p>
+                    <img src="https://www.eleconomista.com.mx/__export/1655862193131/sites/eleconomista/img/2021/11/30/titulos-versus-competencias-futuro-del-trabajo.jpg_1015297232.jpg" alt="Nuevas habilidades para el futuro">
+                </div>
+                <div class="image-item2">
+                    <p><b>Rescatar la importancia de el orgullo nacional a través del conocimiento</b></p>
+                    <img src="https://www.duna.cl/media/2014/01/Bandera-peruana.jpg" alt="Bandera del Perú">
+                </div>
+                <div class="image-item2">
+                    <p><b>Desmostrar al resto nuestras capacidades en autonomía de aprendizaje y aplicación</b></p>
+                    <img src="https://www.magisnet.com/wp-content/uploads/2020/09/Autonomia-alumno.jpg" alt="Autonomía del alumno">
+                </div>
+            </div>
+        </article>
+    </section>
+
+<footer>
+    <p>&copy; 2024 Departamento de San Martín - Perú</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mostrar el mensaje de bienvenida inicialmente
+        setTimeout(function() {
+            var welcomeContainer = document.querySelector('.welcome-container');
+            welcomeContainer.style.opacity = '0';
+            setTimeout(function() {
+                welcomeContainer.style.display = 'none';
+                // Mostrar el contenido de la página
+                var pageContent = document.querySelector('.page-content');
+                pageContent.classList.add('show-content');
+            }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el contenido
+        }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el mensaje de bienvenida
+    });
+</script>
+
+</body>
+</html>

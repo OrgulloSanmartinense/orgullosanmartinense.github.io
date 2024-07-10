@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Departamento de San Martín - Amazonía peruana</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .body-content {
+  padding-bottom: 50px; /* Ajusta el valor según la altura de tu footer */
+	}
+	
+  header {
+    background-color: #00E32D;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decorat8ion: none;
+  }
+ 
+  
+  section {
+    padding: 20px;
+    background-color: #C3E2C9;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    clear: both;
+	margin-bottom: 20px; /* Ajusta el margen inferior entre sections según sea necesario */
+  }
+  .new-section {
+    background-color: #C32E2C9;
+  }
+   article {
+    flex: 2;
+    margin-right: 20px;
+	margin-left: 20px;
+    background-color: #E3FFE8;
+    padding: 20px;
+	display: flex;
+	flex-direction: column;
+  }
+  new-article {
+    flex: 2;
+	margin: 0 20px; /* Margen horizontal de 20px, elimina el margen derecho e izquierdo individualmente */
+    background-color: #E3FFE8;
+    padding: 20px;
+	display: flex;
+	flex-direction: column;
+  }
+  new-article img:first-child {
+    margin-left: 0; /* Elimina el margen superior solo para la primera imagen dentro del article */
+	}
+   .map-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  
+  
+  .map-container p {
+    flex: 1;
+    margin-left: 20px;
+    text-align: justify;
+  }
+  .map-container iframe {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border: 0;
+  }
+  map-container img {
+  flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border: 0;
+	padding: 10px;
+	}
+	map-container ul {
+	flex: 1;
+    margin-left: 20px;
+	margin-right: 20px;
+    text-align: justify;
+	}
+	
+  article p {
+  text-align: justify;
+	}
+	
+	.list-container {
+  text-align: justify; /* Aplica justificación al contenedor de la lista */
+  margin-left: 20px;
+  margin-right: 20px;
+	}
+
+	.list-container ul {
+  padding: 10px;
+	}
+
+	.list-container li {
+  text-align: justify; /* Justifica el texto dentro de los elementos de la lista */
+	}
+	
+  aside {
+    background-color: #E3FFE8;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    background-color: #00E32D;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	height:50px;
+	line-height: 1; /* Ajusta la altura de línea para que el texto se pegue al límite superior */
+    margin-top: 0; /* Elimina cualquier margen superior */
+	margin: 0;
+  }
+  .visitor-form, .new-section {
+    background-color: #C3E2C9;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .visitor-form input, .visitor-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .visitor-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  
+  
+    .container {
+            display: flex;
+            justify-content: space-around; /* Distribuir espacio uniformemente */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea si es necesario */
+            gap: 20px; /* Espacio entre los elementos */
+            margin-top: 20px;
+        }
+
+
+  .image-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 100px;
+    margin-top: 1px;
+    overflow-x: auto;
+  }
+  .image-wrapper img {
+    flex-shrink: 0;
+    width: 100px;
+    height: auto;
+    margin-right: 0;
+	margin-top: 10px;
+  }
+  .image-wrapper img:first-child {
+   margin-left: 0; /* Elimina el margen izquierdo solo para la primera imagen */
+	}
+  .image-wrapper img:last-child {
+    margin-right: 0; /* Elimina el margen derecho adicional */
+  }
+  
+  
+  
+  .container2 {
+   max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+	overflow: hidden; /* Evita que el contenido se salga de los límites */
+	box-sizing: border-box; /* Incluye padding y border dentro del ancho especificado */
+	}
+  
+  .image-wrapper2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* Centrado en lugar de a la derecha */
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+  max-width: 100%; /* Para asegurar que no se salga de los límites del aside */
+	}
+
+	.image-wrapper2 img {
+	flex-shrink: 0;
+	width: 200px;
+	height: auto;
+	margin-right: 10px;
+	margin-left: 10px; /* Añadido para centrar las imágenes */
+		}
+
+	.image-wrapper2 img:first-child {
+	margin-left: 0; /* Eliminamos el margen izquierdo del primer elemento */
+	}
+
+	.image-wrapper2 img:last-child {
+	margin-right: 0; /* Eliminamos el margen derecho del último elemento */
+		}
+		
+	.lista-horizontal {
+    list-style-type: none; /* Quitamos los puntos de lista */
+    padding: 0; /* Quitamos el padding por defecto de la lista */
+    display: flex; /* Usamos flexbox para alinear elementos */
+	flex-wrap: wrap; /* Asegura que los elementos de la lista puedan envolverse en múltiples líneas si es necesario */
+	}
+	
+	.lista-horizontal li {
+		margin-right: 1px; /* Espacio entre elementos */
+		margin-bottom: 0; /* Espacio entre elementos en columnas */
+		flex: 1 0 140px; /* Hace que los elementos de la lista tengan un ancho de 140px y puedan crecer si es necesario */	
+	}
+	
+	
+	
+	
+	
+  /* Estilos para el mensaje de bienvenida */
+  .welcome-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8FFE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+	opacity: 1;
+    visibility: visible;
+    transition: opacity 3s ease-in-out, visibility 3s ease-in-out;
+  }
+  .welcome-message {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+	font-family: Times New Roman, serif; 
+	font-style: italic;
+  }
+  /* Estilo para el contenido de la página */
+  .page-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+  }
+  /* Clase para mostrar el contenido después de la animación de bienvenida */
+  .show-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+   .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            text-align: center;
+        }
+        .image-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .image-item p {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 200px;
+            font-size: 14px; /* Ajusta el tamaño del texto */
+        }
+
+.image-item2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            text-align: center;
+        }
+        .image-item2 img {
+            width: 200px;
+            height: 183px;
+            object-fit: cover;
+        }
+        .image-item2 p {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 200px;
+            font-size: 14px; /* Ajusta el tamaño del texto */
+        }
+
+      .map-container img {
+            margin-top: 50px; /* Ajusta este valor según sea necesario */
+        }
+		
+/* Estilo para el contenedor del aside */
+.aside-container {
+    background-color: #E3FFE8;
+    padding: 20px;
+}
+
+/* Estilo para el contenedor del video dentro del aside */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio entre el título y el video */
+}
+
+/* Estilo para el iframe del video */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    </style>
+</head>
+<body>
+
+<!-- Elemento de bienvenida -->
+<div class="welcome-container">
+    <div class="welcome-message">
+        <h1>Bienvenido a nuestra página</h1>
+        <p>Espere un momento mientras cargamos el contenido...</p>
+    </div>
+</div>
+
+<header>
+    <h1>Departamento de San Martín - Amazonía peruana</h1>
+    <nav>
+        <ul>
+            <li><a href="#historia">Aspectos Sociales y Culturales</a></li>
+            <li><a href="#productos">Aspectos Geográficos</a></li>
+            <li><a href="#contacto">Aspectos económicos</a></li>
+			<li><a href="Quienes somos.html">Sobre Nosotros</a></li>
+			
+        </ul>
+    </nav>
+ </header>
+
+    <section>
+	<article>
+        <h2 id="historia">Puntos importantes de San Martín</h2>
+		<div class="map-container">
+		<div class="list-container">
+        <ul>
+            <li>Está ubicada al noroeste del territorio peruano, usando un espacio de aproximadamente 5,125,331 kilometros cuadrados</li>
+            <li>Fue fundada el 4 de septiembre de 1906</li>
+            <li>Limita con los departamentos del Amazonas, Huanuco, Loreto, y La Libertad</li>
+            <li>En su flora y fauna, contiene diversas especies de plantas, como la caoba, cedro, lupuna, sacha inchi, sangre de grado, uña de gato, etc. Y entre las especies de animales, se pueden encontrar al mono choro, jaguar, puma, tapir, guacamayos, tucanes, águilas harpías, garzas, anaconda, caimanes, tortugas, lagartos, etc.</li>
+            <li>Posee una gran fuente de recursos naturales, que potencian la exportación internacional del Perú, asi como una producción masiva y artesanal de muchas familias en la región.</li>
+            <li>Culturas que habitaron: Awajún, Kichwa, Shawi, Chachapoyas, Chayahuitas, Huambisas, etc.</li>
+            <li>Platos típicos: Tacacho con cecina, juane, patarashca, rumo-Api, sara-Api, entre otros.</li>
+        </ul>
+		</div>
+		 <img src="https://www.entornoturistico.com/wp-content/uploads/2023/02/Arte-y-turismo-en-Tarapoto-Regio%CC%81n-San-Marti%CC%81n-Peru%CC%81.jpg" alt="DEPARTAMENTO DE SAN MARTÍN" width="215" height="250">
+	</div>
+        <h2 id="historia">¿Cuándo se fundó el departamento de San Martín?</h2>
+        <p>El departamento de San Martín tiene tiene una historia que se remonta a tiempos antiguos. Aunque no hay evidencia arqueológica de grandes civilizaciones precolombinas en esta región, se sabe que estuvo habitada por diversas culturas indígenas, como los chachapoyas y los huambisas, quienes dejaron vestigios de su presencia en forma de sitios arqueológicos y construcciones.
+        Sin embargo, el proceso de colonización española en el siglo XVI marcó un cambio significativo en la historia de la región. Los españoles establecieron asentamientos y misiones religiosas en lo que hoy es San Martín, con el propósito de evangelizar a la población indígena y explotar los recursos naturales de la zona, como el caucho, el cacao y el café.
+        El departamento de San Martín fue oficialmente creado el 4 de septiembre de 1906, durante el gobierno del presidente José Pardo y Barreda. En ese momento, comprendía una extensa área de la selva alta y la selva baja, con Moyobamba como su capital. Desde entonces, ha experimentado un desarrollo significativo en diversos sectores, incluyendo la agricultura, la ganadería y el turismo.
+        Hoy en día, San Martín es conocido por su exuberante biodiversidad, sus impresionantes paisajes naturales y su rica cultura amazónica. La región es hogar de numerosas etnias indígenas como los quechua, los awajún y los wampis, que mantienen sus tradiciones ancestrales y contribuyen a la diversidad cultural del Perú.
+        </p>
+		<h2 id="historia">¿A qué distancia está la región de Lima Metropolitana de San Martín, Perú?</h2>
+		 <div class="map-container">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d4027935.72889215!2d-79.11671645998098!3d-9.635590082848616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima!3m2!1d-12.0466888!2d-77.04308859999999!4m5!1s0x91af8123a4e50da3%3A0xc0af0e0d9beff07!2sSan%20Mart%C3%ADn!3m2!1d-7.2444881!2d-76.8259652!5e0!3m2!1ses!2spe!4v1719611005469!5m2!1ses!2spe"width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<p>Lima se encuentra a aproximadamente 999 km del departamento de San Martín, Perú. Para llegar a San Martín:<br>
+         En automóvil, el viaje entre Lima y San Martín demoraría alrededor de 17 horas y 33 minutos.<br>
+         En avión, el viaje entre Lima y San Martín tomaría aproximadamente 5 horas y 54 minutos.<br>
+         En bus cama, el viaje entre Lima y San Martín demoraría aproximadamente 7 horas y 6 minutos<br>
+		 </p>
+		</div>
+    </article>
+    <aside class="aside-container">
+        <h2>Video promocional: Lo grande de San Martín</h2>
+		<div class="video-container">
+        <iframe width="460" height="315" src="https://www.youtube.com/embed/u4kDK-199T8?si=Hie_zC3WRnoJ2CLK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+        <h2>Navegador</h2>
+        <form action="https://www.google.com/search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="Buscar en Google">
+            <input type="submit" value="Buscar">
+        </form>
+        <h2>Datos Interesantes de San Martín</h2>
+		<div class="video-container">
+		<iframe width="460" height="315" src="https://www.youtube.com/embed/8i-Z09DAFg8?si=1vR3yZRG4E5akIdv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+    </aside>
+</section>
+
+
+<section class="new-section">
+        <article class="new-article">
+            <h2>Zonas protegidas</h2>
+            <p>Zonas y/o áreas protegidas para proteger la flora y fauna de San Martín</p>
+            <div class="container">
+                <div class="image-item">
+                    <p><b>Parque Nacional Río Abiseo</b></p>
+                    <img src="https://blog.redbus.pe/wp-content/uploads/2019/10/Cordillera_Laguna_Del_Mundo_Perdido.jpg" alt="Parque Nacional Río Abiseo">
+                </div>
+                <div class="image-item2">
+                    <p><b>Parque Nacional Cordillera Azul</b></p>
+                    <img src="https://www.tvperu.gob.pe/sites/default/files/azul.png" alt="Parque Nacional Cordillera Azul">
+                </div>
+                <div class="image-item2">
+                    <p><b>Bosque de Protección de Alto Mayo</b></p>
+                    <img src="https://www.actualidadambiental.pe/wp-content/uploads/2020/07/conservacion-internacional-alto-mayo.jpg" alt="Bosque de Protección de Alto Mayo">
+                </div>
+                <div class="image-item2">
+                    <p><b>Área de Conservación Regional Cordillera Escalera</b></p>
+                    <img src="https://th.bing.com/th/id/OIP.GdKVYqnFwt_kjRj_GVlQGAAAAA?rs=1&pid=ImgDetMain" alt="Área de Conservación Regional Cordillera Escalera">
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+<section class="visitor-form">
+    <article>
+        <h2>Registro de Visitantes de la página</h2>
+        <form>
+            <input type="text" name="name" placeholder="Nombre Completo">
+            <input type="email" name="email" placeholder="Correo Electrónico">
+            <textarea name="comments" placeholder="Comentarios"></textarea>
+            <input type="submit" value="Registrarse">
+        </form>
+    </article>
+</section>
+
+<section class="new-section">
+    <article>
+        <h2>Formulario de encuesta</h2>
+        <form action="https://formspree.io/f/mbjnnwkr" method="POST">
+            <h3>¿Te sientes atraído para ir a San Martín?</h3>
+            <input type="radio" id="si" name="atraido" value="si">
+            <label for="si">Sí</label><br>
+            <input type="radio" id="no" name="atraido" value="no">
+            <label for="no">No</label><br>
+            <input type="radio" id="talvez" name="atraido" value="talvez">
+            <label for="talvez">Tal vez</label><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </article>
+</section>
+
+<footer>
+    <p>&copy; 2024 Departamento de San Martín - Perú</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mostrar el mensaje de bienvenida inicialmente
+        setTimeout(function() {
+            var welcomeContainer = document.querySelector('.welcome-container');
+            welcomeContainer.style.opacity = '0';
+            setTimeout(function() {
+                welcomeContainer.style.display = 'none';
+                // Mostrar el contenido de la página
+                var pageContent = document.querySelector('.page-content');
+                pageContent.classList.add('show-content');
+            }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el contenido
+        }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el mensaje de bienvenida
+    });
+</script>
+
+</body>
+</html>
