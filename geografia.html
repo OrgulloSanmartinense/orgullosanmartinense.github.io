@@ -112,6 +112,29 @@
 	    background-color: none;
 background: none;
         }
+	    /* Estilo para el contenedor del aside */
+.aside-container {
+    background-color: #E3FFE8;
+    padding: 20px;
+}
+
+/* Estilo para el contenedor del video dentro del aside */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio entre el título y el video */
+}
+
+/* Estilo para el iframe del video */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
     </style>
 </head>
 <body>
@@ -204,9 +227,11 @@ background: none;
             <p>En algunas áreas rurales de San Martín, el acceso a servicios básicos como agua potable, electricidad y atención médica es limitado, lo que agrava la situación en caso de emergencias o desastres naturales.</p>
 
         </article>
-        <aside>
+        <aside class=".aside-container">
             <h2>¿Porqué valorar la Fauna de San Martin?</h2>
+		<div class=".video-container">
            <iframe width="560" height="315" src="https://www.youtube.com/embed/Eb4TN0NQ8nw?si=SZU_KflVXLIIOAMi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
             <h2>Buscador de Google</h2>
             <form action="https://www.google.com/search" method="get" target="_blank">
                 <input type="text" name="q" placeholder="Buscar en Google">
