@@ -77,35 +77,40 @@
             border: none;
             cursor: pointer;
         }
-       /* Estilos para el mensaje de bienvenida */
+      /* Estilos para el mensaje de bienvenida */
 	    .welcome-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #E8FFE5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 3s ease-in-out, visibility 3s ease-in-out;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #E8FFE5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1.5s ease-out, visibility 0s 1.5s; /* Transición suave de opacidad */
+        }
 
-.welcome-container.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
+        .welcome-container.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.5s ease-out, visibility 0s; /* Transición suave de opacidad */
+        }
 
-.welcome-message {
-    text-align: center;
-    font-size: 2em;
-    color: #333;
-    font-family: Times New Roman, serif;
-    font-style: italic;
-}
+        .welcome-message {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+            font-family: Times New Roman, serif;
+            font-style: italic;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -229,18 +234,12 @@
     </footer>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Mostrar el mensaje de bienvenida inicialmente
-    setTimeout(function() {
-        var welcomeContainer = document.querySelector('.welcome-container');
-        welcomeContainer.style.opacity = '0';
+        // Mostrar el mensaje de bienvenida inicialmente
         setTimeout(function() {
-            welcomeContainer.style.display = 'none';
-            // Mostrar el contenido de la página después de 3 segundos
-            var pageContent = document.querySelector('.page-content');
-            pageContent.classList.add('show-content');
-        }, 1000); // Cambiado a 1000 milisegundos (1 segundo) para que el contenedor dure 3 segundos
-    }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el mensaje de bienvenida
-});
+            var welcomeContainer = document.querySelector('.welcome-container');
+            welcomeContainer.classList.add('hidden'); // Agregar clase para ocultar gradualmente
+        }, 3000); // 3000 milisegundos (3 segundos) antes de ocultar el contenedor de bienvenida
+    });
 </script>
 </body>
 </html>
