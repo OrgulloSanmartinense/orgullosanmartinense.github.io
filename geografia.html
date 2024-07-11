@@ -221,5 +221,20 @@
     <footer>
         <p>&copy; 2024 Geografía de San Martín - Perú</p>
     </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mostrar el mensaje de bienvenida inicialmente
+        setTimeout(function() {
+            var welcomeContainer = document.querySelector('.welcome-container');
+            welcomeContainer.style.opacity = '0';
+            setTimeout(function() {
+                welcomeContainer.style.display = 'none';
+                // Mostrar el contenido de la página
+                var pageContent = document.querySelector('.page-content');
+                pageContent.classList.add('show-content');
+            }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el contenido
+        }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el mensaje de bienvenida
+    });
+</script>
 </body>
 </html>
