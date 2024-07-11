@@ -108,7 +108,7 @@
             font-style: italic;
             padding: 20px;
             border-radius: 10px;
-            background-color: #fff;
+            background-color: #E8FFE5;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
@@ -233,13 +233,19 @@
         <p>&copy; 2024 Geografía de San Martín - Perú</p>
     </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-        // Mostrar el mensaje de bienvenida inicialmente
+	document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar el mensaje de bienvenida inicialmente
+    setTimeout(function() {
+        var welcomeContainer = document.querySelector('.welcome-container');
+        welcomeContainer.style.opacity = '0';
         setTimeout(function() {
-            var welcomeContainer = document.querySelector('.welcome-container');
-            welcomeContainer.classList.add('hidden'); // Agregar clase para ocultar gradualmente
-        }, 3000); // 3000 milisegundos (3 segundos) antes de ocultar el contenedor de bienvenida
-    });
+            welcomeContainer.style.display = 'none';
+            // Mostrar el contenido de la página después de 3 segundos
+            var pageContent = document.querySelector('.page-content');
+            pageContent.classList.add('show-content');
+        }, 1000); // Cambiado a 1000 milisegundos (1 segundo) para que el contenedor dure 3 segundos
+    }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el mensaje de bienvenida
+});
 </script>
 </body>
 </html>
