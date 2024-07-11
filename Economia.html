@@ -87,6 +87,31 @@
             border: none;
             cursor: pointer;
         }
+         /* Estilo para el contenedor del aside */
+.aside-container {
+    background-color: #E3FFE8;
+    padding: 20px;
+	position: relative;
+        overflow: hidden; /* Para ocultar contenido que se desborde */
+}
+
+/* Estilo para el contenedor del video dentro del aside */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio entre el título y el video */
+}
+
+/* Estilo para el iframe del video */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
     </style>
 </head>
 <body>
@@ -300,11 +325,11 @@ Esta región producía 13 mil kilos de palma aceitera por hectárea y, al 2018, 
 <p>Y con esto concluimos nuestra subpagina de economía ¡Gracias por visitar nuestro sitio web!</p>
 
         </article>
-        <aside>
+        <aside class=".aside-container">
             <h2>Video promocional: SAN MARTIN: EL TURISMO Y LA AGRICULTURA</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/45S7hmB78bg?si=bB4sO1qHqfdy5y4_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
+            <div class="video-container">
+          <iframe width="460" height="315" src="https://www.youtube.com/embed/45S7hmB78bg?si=bB4sO1qHqfdy5y4_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <h2>Formulario de Búsqueda en Google</h2>
             <form action="https://www.google.com/search" method="get" target="_blank">
                 <input type="text" name="q" placeholder="Buscar en Google">
