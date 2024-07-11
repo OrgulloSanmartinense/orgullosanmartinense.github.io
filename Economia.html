@@ -90,30 +90,40 @@
          /* Estilo para el contenedor del aside */
 .aside-container {
     background-color: #E3FFE8;
-    padding: 20px;
-    position: relative;
-    overflow: hidden; /* Para ocultar contenido que se desborde */
+    padding: 10px;
+	flex-direction: column
 }
+.aside-container p {
+    margin-left: 0;
+    text-align: justify;
+	}
 
 /* Estilo para el contenedor del video dentro del aside */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporción 16:9 (9/16 = 0.5625) */
     height: 0;
     overflow: hidden;
     margin-top: 20px; /* Espacio entre el título y el video */
-    max-width: 100%; /* Ajustar el ancho máximo */
-
 }
 
 /* Estilo para el iframe del video */
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.video-container {
     width: 100%;
-    height: 100%;
-}
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .video-wrapper iframe {
+    width: 100%;
+    height: auto;
+  }
     </style>
 </head>
 <body>
