@@ -47,6 +47,7 @@
             width: 30%;
             display: flex;
             flex-direction: column;
+		margin-bottom: 20px; 
         }
         aside h2 {
         margin-left: 20px;
@@ -84,10 +85,15 @@
     text-align: justify;
 	}
 .aside-container img {
-	margin-left: 10px; 
+	margin-left: 10px;                                 
+	overflow-clip-margin: content-box;
+        overflow: clip; 
 }
 .aside-container form {
 	margin-left: 10px;
+	display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
 }
 /* Estilo para el contenedor del video dentro del aside */
 .video-container {
