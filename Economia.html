@@ -75,7 +75,8 @@
 .aside-container {
     background-color: #E3FFE8;
     padding: 10px;
-	flex-direction: column
+	display: flex; 
+	flex-direction: column;
 }
 .aside-container p {
     margin-left: 0;
@@ -88,16 +89,21 @@
     height: 0;
     overflow: hidden;
     margin-top: 20px; /* Espacio entre el título y el video */
+	padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+}
 }
 
 /* Estilo para el iframe del video */
-.video-container {
+.video-container iframe {
     width: 100%;
     max-width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+position: absolute;
+    top: 0;
+    left: 0;
   }
   .video-wrapper {
     width: 100%;
@@ -321,9 +327,9 @@ Esta región producía 13 mil kilos de palma aceitera por hectárea y, al 2018, 
 <p>Y con esto concluimos nuestra subpagina de economía ¡Gracias por visitar nuestro sitio web!</p>
 
         </article>
-        <aside class=".aside-container">
+        <aside class="aside-container">
             <h2>Video promocional: SAN MARTIN: EL TURISMO Y LA AGRICULTURA</h2>
-            <div class=".video-container">
+            <div class="video-container">
      <iframe width="460" height="315" src="https://www.youtube.com/embed/45S7hmB78bg?si=vZ8Vke54J6jVwvom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <h2>Formulario de Búsqueda en Google</h2>
