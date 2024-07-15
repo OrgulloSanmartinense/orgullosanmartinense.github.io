@@ -14,8 +14,26 @@
     flex-direction: column;
     min-height: 100vh;
   }
+	body img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s
+	}
+	body img:hover { 
+		transform: scale(1.1);
+		    transition: 4s;
+	}
   .body-content {
   padding-bottom: 50px; /* Ajusta el valor según la altura de tu footer */
+	}
+	.body-content img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	.body-content img:hover {
+		transform: scale(1.1);
+		transition: 4s;
 	}
 	
   header {
@@ -48,9 +66,28 @@
     clear: both;
 	margin-bottom: 20px; /* Ajusta el margen inferior entre sections según sea necesario */
   }
+	section img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s
+	}
+	section img:hover { 
+		transform: scale(1.1);
+		    transition: 4s;
+	}
+	
   .new-section {
     background-color: #C32E2C9;
   }
+	.new-section img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+.new-section img:hover {
+	transform: scale(1.1);
+	transition: 4s;
+}
    article {
     flex: 2;
     margin-right: 20px;
@@ -60,6 +97,15 @@
 	display: flex;
 	flex-direction: column;
   }
+	article img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	article img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
   new-article {
     flex: 2;
 	margin: 0 20px; /* Margen horizontal de 20px, elimina el margen derecho e izquierdo individualmente */
@@ -68,6 +114,15 @@
 	display: flex;
 	flex-direction: column;
   }
+	new-article img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	new-article img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
   new-article img:first-child {
     margin-left: 0; /* Elimina el margen superior solo para la primera imagen dentro del article */
 	}
@@ -75,7 +130,6 @@
     display: flex;
     justify-content: space-between;
   }
-  
   
   
   
@@ -95,7 +149,14 @@
     width: 250px;
     height: 250px;
     border: 0;
-	padding: 10px;
+ 	padding: 10px;
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s
+	}
+	map-container img:hover { 
+		transform: scale(1.1);
+		    transition: 4s;
 	}
 	map-container ul {
 	flex: 1;
@@ -129,6 +190,15 @@
     display: flex;
     flex-direction: column;
   }
+	aside img {
+	margin: 10px;
+		cursor: pointer; 
+		transition: 4s;
+	}
+	aside img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
   footer {
     background-color: #00E32D;
     color: #fff;
@@ -170,7 +240,15 @@
             gap: 20px; /* Espacio entre los elementos */
             margin-top: 20px;
         }
-
+container img {
+	margin: 10px;
+	cursor: pointer;
+	transition: 4s;
+}
+	container img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
 
   .image-wrapper {
     display: flex;
@@ -186,15 +264,20 @@
     height: auto;
     margin-right: 0;
 	margin-top: 10px;
+	  margin: 10px;
+	  cursor: pointer;
+	  transition: 4s;
   }
+	.image-wrapper img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
   .image-wrapper img:first-child {
    margin-left: 0; /* Elimina el margen izquierdo solo para la primera imagen */
 	}
   .image-wrapper img:last-child {
     margin-right: 0; /* Elimina el margen derecho adicional */
   }
-  
-  
   
   .container2 {
    max-width: 100%;
@@ -203,7 +286,15 @@
 	overflow: hidden; /* Evita que el contenido se salga de los límites */
 	box-sizing: border-box; /* Incluye padding y border dentro del ancho especificado */
 	}
-  
+  .container2 img {
+	  margin: 10px;
+	  cursor: pointer;
+	  transition: 4s; 
+  }
+	.container img:hover {
+		transform: scale(1.1)
+			transition: 4s;
+	}
   .image-wrapper2 {
   display: flex;
   flex-wrap: nowrap;
@@ -220,7 +311,14 @@
 	height: auto;
 	margin-right: 10px;
 	margin-left: 10px; /* Añadido para centrar las imágenes */
+		margin: 10px; 
+		cursor: pointer;
+		transition: 4s;
 		}
+	.image-wrapper2 img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
 
 	.image-wrapper2 img:first-child {
 	margin-left: 0; /* Eliminamos el margen izquierdo del primer elemento */
@@ -293,6 +391,15 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	.image-item img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
+		
         }
         .image-item p {
             margin-bottom: 10px;
@@ -312,7 +419,14 @@
             width: 200px;
             height: 183px;
             object-fit: cover;
-        }
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	.image-item2 img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
         .image-item2 p {
             margin-bottom: 10px;
             text-align: center;
@@ -322,13 +436,29 @@
 
       .map-container img {
             margin-top: 50px; /* Ajusta este valor según sea necesario */
-        }
+	      margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	.map-container img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
 		
 /* Estilo para el contenedor del aside */
 .aside-container {
     background-color: #E3FFE8;
     padding: 20px;
 }
+	.aside-container img { 
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	.aside-container img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
 
 /* Estilo para el contenedor del video dentro del aside */
 .video-container {
@@ -347,6 +477,15 @@
     width: 100%;
     height: 100%;
 }
+	.video-container img {
+		margin: 10px;
+		cursor: pointer;
+		transition: 4s;
+	}
+	.video-container img:hover {
+		transform: scale(1.1);
+		transition: 4s;
+	}
     </style>
 </head>
 <body>
