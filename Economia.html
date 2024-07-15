@@ -44,10 +44,31 @@ r<!DOCTYPE html>
 	    article p { 
 		    text-align: justify; 
 	    }
-	    article img {
-		    max-width: 100%;
-		    height: auto; 
-	    }
+	    table {
+            width: 100%;
+            border-collapse: collapse;
+		    border: 1; 
+		    margin-left: auto;
+		    margin-right: auto;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Estilo para asegurar que las celdas se ajusten a su contenido */
+        .image-cell {
+            width: auto;
+            height: auto;
+        }
+	    
         aside {
             flex: 1;
             background-color: #E3FFE8;
@@ -173,7 +194,7 @@ position: absolute;
 <p>Estos factores de producción interactúan entre sí para determinar la capacidad productiva y el potencial económico de San Martín. El aprovechamiento adecuado de estos recursos y factores es fundamental para el desarrollo sostenible y la mejora de la calidad de vida de la población en la región.</p>
 
 <h3> Lugares turísticos:</h3> 
-<table border="1" style="margin-left:auto;margin-right:auto;">
+<table>
   <tr>
     <th>Lugares Turisticos</th>
     <th>Imagen (En enlace)</th>
@@ -184,8 +205,7 @@ position: absolute;
     <td>
 
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://taytamaki.com/wp-content/uploads/2022/12/304542641_809456460209758_2804320703011965875_n-DeNoiseAI-standard-standard-scale-6_00x-gigapixel-3-1024x732.jpg" alt="Taytamaki">
-
+<img src="https://taytamaki.com/wp-content/uploads/2022/12/304542641_809456460209758_2804320703011965875_n-DeNoiseAI-standard-standard-scale-6_00x-gigapixel-3-1024x732.jpg" alt="Taytamaki" class="responsive-image">
 </td>
     <td>Es turístico porque es un parque amazónico ubicado en las alturas de la bella ciudad de Tarapoto, acompañado de impresionantes montañas verdes que cubren nuestro pasar del tiempo y que dentro de ellas albergan misteriosas criaturas de vida silvestre que se alimentan con nuestra gran diversidad de frutos.</td>
   </tr>
@@ -193,7 +213,7 @@ position: absolute;
     <td>Castillo de Lamas</td>
     <td>
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://denomades.imgix.net/destinos/tarapoto/865/city-tour-lamas.jpg" alt="Castillo de Lamas">
+<img src="https://denomades.imgix.net/destinos/tarapoto/865/city-tour-lamas.jpg" alt="Castillo de Lamas" class="responsive-image">
 </td>
     <td>La razón principal es que este castillo es un símbolo de la historia de amor entre Nicola Felice y el pueblo de Lamas, muy representativo de Lamas como la ciudad más hermosa de San Martín, ya que cuando el empresario, Nicola, buscaba una zona para montar su futuro hogar, le quedó claro que este tenía que ser el lugar para cumplir añorado sueño, enamorado de la belleza de la ciudad.</td>
   </tr>
@@ -201,7 +221,7 @@ position: absolute;
     <td>Catarata de Ahuashiyacu</td>
     <td>
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://www.peru.travel/contenido/atractivo/imagen/es/574/1.1/principal/catarata-de-ahuashiyacu.jpg" alt="Catarata de Ahuashiyacu">
+<img src="https://www.peru.travel/contenido/atractivo/imagen/es/574/1.1/principal/catarata-de-ahuashiyacu.jpg" alt="Catarata de Ahuashiyacu" class="responsive-image">
 </td>
     <td>La razón principal es que estas cataratas son las principales fuentes de vida para la flora y fauna de la zona, así como crear un entorno mágico que atrae una gran variedad de mariposas y al famoso gallito de las rocas, considerado ave nacional. Además, es un lugar ideal para practicar buceo o nadar, así como disfrutar de la caída del agua y nadar con neumáticos.</td>
   </tr>
@@ -209,7 +229,7 @@ position: absolute;
     <td>Laguna Azul</td>
     <td>
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://elcomercio.pe/resizer/PSKNc3ym5_TO2Q1xG19lVLyLUfI=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/LRCHZYAMZFB7NJMOY3UL75ZZ3E.jpg" alt="Laguna Azul">
+<img src="https://elcomercio.pe/resizer/PSKNc3ym5_TO2Q1xG19lVLyLUfI=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/LRCHZYAMZFB7NJMOY3UL75ZZ3E.jpg" alt="Laguna Azul" class="responsive-image">
 </td>
     <td>Es un lugar turístico principalmente por su renombrado nombre como “el espejo del cielo de la selva”. La laguna Azul es una de las excursiones más populares de las que se tienen a la mano cerca de Tarapoto, principalmente por sus aguas tranquilas y templadas, siendo el paraíso de los deportes acuáticos y el disfrute de los espacios naturales, así como por su cercanía al pueblo de Sauce.</td>
   </tr>
@@ -217,7 +237,7 @@ position: absolute;
     <td>Plaza de Armas de Moyobamba</td>
     <td>
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://www.iperu.org/wp-content/uploads/2016/01/plaza-de-armas-de-moyobamba.jpg" alt="Plaza de Armas de Moyobamba">
+<img src="https://www.iperu.org/wp-content/uploads/2016/01/plaza-de-armas-de-moyobamba.jpg" alt="Plaza de Armas de Moyobamba" class="responsive-image">
 </td>
     <td>La razón principal es que la Plaza de Armas, a veces llamada informalmente plaza regional, es el principal espacio urbano de la ciudad peruana de Moyobamba, la primera ciudad fundada por los españoles en 1540, siendo una zona de total evidencia de los antecedentes hispánicos y naturales de la zona. </td>
   </tr>
@@ -226,7 +246,7 @@ position: absolute;
     <td>
 
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://portal.andina.pe/EDPFotografia3/thumbnail/2023/02/20/000935002M.jpg" alt="Plaza de armas de Tarapoto">
+<img src="https://portal.andina.pe/EDPFotografia3/thumbnail/2023/02/20/000935002M.jpg" alt="Plaza de armas de Tarapoto" class="responsive-image">
 </td>
     <td>Es turístico ya que es un lugar tranquilo en el cual mucha gente pasea. Sin embargo, este lugar es visitado diariamente por su monumento de José de San Martín que se sitúa en el centro de un obelisco piramidal. También es importante visitar esta plaza por la iglesia matriz de Tarapoto que se encuentra en la esquina suroccidental de la plaza. </td>
   </tr>
@@ -235,7 +255,7 @@ position: absolute;
     <td>
 
 <!-- La etiqueta <img> se utiliza para insertar imágenes -->
-<img src="https://www.centrourku.org/wp-content/uploads/2016/11/IMG_7896-min-scaled.jpg" alt="Centro Urku">
+<img src="https://www.centrourku.org/wp-content/uploads/2016/11/IMG_7896-min-scaled.jpg" alt="Centro Urku" class="responsive-image">
 </td>
     <td>El centro Urku es turístico, ya que desde el 2006 este local ha albergado a más de 1000 animales salvajes entre ellos 61 especies, de las cuales aproximadamente el 30% fueron devueltas a su hábitat natural. Es por esto que las personas vienen a este zoológico a visitar y admirar el trabajo del centro.</td>
   </tr>
