@@ -166,25 +166,6 @@ transition: 4s;
     cursor: pointer;
     border-radius: 4px;
   }
-  
-  image-container2 {
-    width: 300px;
-    aspect-ratio: auto 215 / 250;
-    height: 400px;
-  }
-  image-container2 img {
-   padding-top: 60%;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-	margin: 10px; 
-	cursor: pointer;
-	transition: 4s;
-	    }
-image-container2 img:hover {
-transform: scale(1.1);
-transition: 4s; 
-	    }
-
     .container {
             display: flex;
             justify-content: space-around; /* Distribuir espacio uniformemente */
@@ -259,6 +240,13 @@ transition: 4s;
 	height: auto;
 	margin-right: 10px;
 	margin-left: 10px; /* Añadido para centrar las imágenes */
+		    margin: 10px; 
+		    cursor: pointer;
+		    transition: 4s;
+	    }
+.image-wrapper2 img:hover {
+		    transform: scale(1.1);
+		    transition: 4s; 
 	    }
 
 	.image-wrapper2 img:first-child {
@@ -281,10 +269,6 @@ transition: 4s;
 		margin-bottom: 0; /* Espacio entre elementos en columnas */
 		flex: 1 0 140px; /* Hace que los elementos de la lista tengan un ancho de 140px y puedan crecer si es necesario */	
 	}
-	
-	
-	
-	
 	
   /* Estilos para el mensaje de bienvenida */
   .welcome-container {
@@ -347,7 +331,7 @@ transition: 4s;
             align-items: center;
             width: 200px;
             text-align: center;
-			background-color: #B9D1B6; /* Color de fondo para resaltar el párrafo */
+	background-color: #B9D1B6; /* Color de fondo para resaltar el párrafo */
     padding: 10px; /* Añade padding para mejorar la apariencia */
     border-radius: 5px; /* Añade esquinas redondeadas para un mejor estilo */
         }
@@ -359,7 +343,7 @@ transition: 4s;
 	cursor: pointer;
 	transition: 4s;
 	    }
-	    .image-item img:hover {
+	    .image-item2 img:hover {
 		    transform: scale(1.1);
 		    transition: 4s; 
 	    }
