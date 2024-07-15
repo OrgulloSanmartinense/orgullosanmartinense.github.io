@@ -171,6 +171,25 @@
     <footer>
         <p>&copy; 2024 ExplorandoSanMartín.com - Todo el trabajo realizado</p>
     </footer>
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+            var welcomeContainer = document.querySelector('.welcome-container');
+            var pageContent = document.querySelector('.page-content');
+
+            // Mostrar el mensaje de bienvenida
+            welcomeContainer.classList.add('show');
+
+            // Ocultar el mensaje de bienvenida después de 2 segundos
+            setTimeout(function() {
+                welcomeContainer.style.opacity = '0';
+                setTimeout(function() {
+                    welcomeContainer.style.display = 'none';
+                    // Mostrar el contenido de la página
+                    pageContent.classList.add('show-content');
+                }, 2000); // Espera 2 segundos para la transición de opacidad
+            }, 2000); // Espera 2 segundos antes de comenzar a ocultar el mensaje de bienvenida
+        });
+</script>
 	
 </body>
 </html>
