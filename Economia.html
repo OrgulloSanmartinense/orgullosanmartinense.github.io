@@ -198,8 +198,6 @@ position: absolute;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	    background-color: none;
-		background: none;
         }
     </style>
 </head>
@@ -437,19 +435,23 @@ Esta región producía 13 mil kilos de palma aceitera por hectárea y, al 2018, 
         <p>&copy; 2024 Economía de San Martín - Perú</p>
     </footer>
 	<script>
-   document.addEventListener('DOMContentLoaded', function() {
-        // Mostrar el mensaje de bienvenida inicialmente
-        setTimeout(function() {
+  document.addEventListener('DOMContentLoaded', function() {
             var welcomeContainer = document.querySelector('.welcome-container');
-            welcomeContainer.style.opacity = '0';
+            var pageContent = document.querySelector('.page-content');
+
+            // Mostrar el mensaje de bienvenida
+            welcomeContainer.classList.add('show');
+
+            // Ocultar el mensaje de bienvenida después de 2 segundos
             setTimeout(function() {
-                welcomeContainer.style.display = 'none';
-                // Mostrar el contenido de la página
-                var pageContent = document.querySelector('.page-content');
-                pageContent.classList.add('show-content');
-            }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el contenido
-        }, 2000); // 2000 milisegundos (2 segundos) de espera antes de mostrar el mensaje de bienvenida
-    });
+                welcomeContainer.style.opacity = '0';
+                setTimeout(function() {
+                    welcomeContainer.style.display = 'none';
+                    // Mostrar el contenido de la página
+                    pageContent.classList.add('show-content');
+                }, 2000); // Espera 2 segundos para la transición de opacidad
+            }, 2000); // Espera 2 segundos antes de comenzar a ocultar el mensaje de bienvenida
+        });
 </script>
 </body>
 </html>
