@@ -181,7 +181,7 @@
 
             // Ocultar el mensaje de bienvenida después de 2 segundos
             setTimeout(function() {
-                welcomeContainer.style.opacity = '0';
+                welcomeContainer.classList.add('hide');
                 setTimeout(function() {
                     welcomeContainer.style.display = 'none';
                     // Mostrar el contenido de la página
