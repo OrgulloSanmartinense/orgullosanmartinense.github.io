@@ -98,9 +98,17 @@
     width: 250px;
     height: 250px;
     border: 0;
-	padding: 10px;
-	padding-top: 20%; 
-	}
+padding: 10px;
+padding-top: 20%; 
+margin: 10px; 
+cursor: pointer;
+transition: 4s;
+	    }
+map-container img:hover {
+transform: scale(1.1);
+transition: 4s; 
+	    }
+
   article p {
   text-align: justify;
 	}
@@ -168,9 +176,15 @@
    padding-top: 60%;
     overflow-clip-margin: content-box;
     overflow: clip;
-	
-  }
-  
+	margin: 10px; 
+	cursor: pointer;
+	transition: 4s;
+	    }
+image-container2 img:hover {
+transform: scale(1.1);
+transition: 4s; 
+	    }
+
     .container {
             display: flex;
             justify-content: space-around; /* Distribuir espacio uniformemente */
@@ -179,6 +193,15 @@
             margin-top: 20px;
         }
 
+.container img {
+		    margin: 10px; 
+		    cursor: pointer;
+		    transition: 4s;
+	    }
+	    container img:hover {
+		    transform: scale(1.1);
+		    transition: 4s; 
+	    }
 
   .image-wrapper {
     display: flex;
@@ -203,7 +226,6 @@
   }
   
   
-  
   .container2 {
    max-width: 100%;
 	padding: 20px;
@@ -211,7 +233,16 @@
 	overflow: hidden; /* Evita que el contenido se salga de los límites */
 	box-sizing: border-box; /* Incluye padding y border dentro del ancho especificado */
 	}
-  
+.container2 img {
+		    margin: 10px; 
+		    cursor: pointer;
+		    transition: 4s;
+	    }
+.container2 img:hover {
+		    transform: scale(1.1);
+		    transition: 4s; 
+	    }
+
   .image-wrapper2 {
   display: flex;
   flex-wrap: nowrap;
@@ -228,7 +259,7 @@
 	height: auto;
 	margin-right: 10px;
 	margin-left: 10px; /* Añadido para centrar las imágenes */
-		}
+	    }
 
 	.image-wrapper2 img:first-child {
 	margin-left: 0; /* Eliminamos el margen izquierdo del primer elemento */
@@ -310,7 +341,7 @@
         }
 
 .image-item2 {
-			background color: #B9D1B6; 
+	background color: #B9D1B6; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -324,7 +355,15 @@
             width: 200px;
             height: 183px;
             object-fit: cover;
-        }
+         margin: 10px; 
+	cursor: pointer;
+	transition: 4s;
+	    }
+	    .image-item img:hover {
+		    transform: scale(1.1);
+		    transition: 4s; 
+	    }
+
         .image-item2 p {
             margin-bottom: 10px;
     text-align: justify; /* Justifica el texto */
