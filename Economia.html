@@ -166,6 +166,40 @@ position: absolute;
     width: 100%;
     height: auto;
   }
+	      /* Estilos para el mensaje de bienvenida */
+  .welcome-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8FFE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+	opacity: 1;
+    visibility: visible;
+    transition: opacity 3s ease-in-out, visibility 3s ease-in-out;
+  }
+  .welcome-message {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+	font-family: Times New Roman, serif; 
+	font-style: italic;
+  }
+  /* Estilo para el contenido de la página */
+  .page-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+  }
+  /* Clase para mostrar el contenido después de la animación de bienvenida */
+  .show-content {
+    opacity: 1;
+    visibility: visible;
+  }
     </style>
 </head>
 <body>
